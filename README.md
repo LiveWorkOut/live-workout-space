@@ -23,11 +23,10 @@ Allowing users to participate in live sessions led by professional trainers and 
 
 ### App Evaluation
 
-[Evaluation of your app across the following attributes]
 - **Category:** Health, Video Streaming
 - **Mobile:** Yes
-- **Story:**  [What story does your app tell?]
-- **Market:** [Target audience for the app]
+- **Story:**  Our app revolutionizes workouts by bringing live workout sessions with professional trainesrs and other people around the worl.d
+- **Market:** People who want to live an active and healthy lifestyle
 - **Habit:** Habit Use
 - **Scope:** Narrow Scope fitness streaming community
 
@@ -134,14 +133,3 @@ Workout
 |weight| Weight if applicable
 | ...      | ...    | ...                          
 
-
-
-
-### Networking
-
-- [List of network requests by screen]
-- [Example: `[GET] /users` - to retrieve user data]
-- ...
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
