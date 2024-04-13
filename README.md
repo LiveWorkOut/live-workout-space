@@ -25,7 +25,7 @@ Allowing users to participate in live sessions led by professional trainers and 
 
 - **Category:** Health, Video Streaming
 - **Mobile:** Yes
-- **Story:**  Our app revolutionizes workouts by bringing live workout sessions with professional trainesrs and other people around the worl.d
+- **Story:**  Our app revolutionizes workouts by bringing live workout sessions with professional trainers and other people around the world
 - **Market:** People who want to live an active and healthy lifestyle
 - **Habit:** Habit Use in the daily basis by a single user. Around 3-5 times a week for 20-45 minutes.
 - **Scope:** Narrow Scope fitness streaming community
