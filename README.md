@@ -113,10 +113,12 @@ Schedule
 
 ActivityRecord
 
-| Property | Type   | Description                                  |
-|----------|--------|----------------------------------------------|
-| int | String | unique id for the user post (default field)   |
-| ...      | ...    | ...                          
+| Property   | Type     | Description                                 |
+| ---------- | -------- |:------------------------------------------- |
+| id         | String   | unique id for the user post (default field) |
+| timestamp  | datetime | Time of the activity                        |
+| workout_id | int      | the workout performed                       |
+| ...        | ...      | ...                                         |
 
 - Metadata to be defined
 
@@ -131,9 +133,6 @@ Workout
 |time| int | expected duration of the workout in seconds
 |weight| Weight if applicable
 | ...      | ...    | ...                          
-
-
-
 
 
 
