@@ -1,13 +1,7 @@
-Original App Design Project - README Template
-===
-
-## Live Workout Application
+# Live Workout Application
 
 
-Digital Wireframe link: https://www.figma.com/file/3QqNP3MJXaWRzLeNhJlFTJ/Original-App-Design-Project?type=design&node-id=0%3A1&mode=design&t=CkHcBp2yqG9Q6qRA-1
-
-Interactive Prototype Gif Link: https://i.imgur.com/9xAWptz.gif
-
+Figma Link: https://www.figma.com/file/3QqNP3MJXaWRzLeNhJlFTJ/Original-App-Design-Project?type=design&node-id=0%3A1&mode=design&t=CkHcBp2yqG9Q6qRA-1
 
 Designed to facilitate real-time fitness classes and workouts.
 Allowing users to participate in live sessions led by professional trainers and instructors.
@@ -20,7 +14,7 @@ Allowing users to participate in live sessions led by professional trainers and 
 4. [Schema](#Schema)
 
 ## Overview
-Our app allows peer to peer workout streaming content and scheduling of work out streams. 
+
 ### Description
 
 
@@ -70,27 +64,26 @@ Allowing users to participate in live sessions led by professional trainers and 
 **Tab Navigation** (Tab to Screen)
 
 
-- [ ] [First Tab, e.g., Home Feed
-- [ ] [Second Tab, e.g., Profile]
-...
-...
-...
+- [ ] First Tab: [**Workouts Screen**]
+- [ ] Second Tab: [**Instructors Screen**]
+- [ ] Third Tab: [**Search Screen**]
+- [ ] Fourth Tab: [**Profile Screen**]
 
 **Flow Navigation** (Screen to Screen)
 
-- [ ] [**Screen Name**]
-  * Leads to [**Next Screen**]
-- [ ] [**Another Screen Name**]
-  * Leads to [**Another Screen**] 
+- [ ] [**Workouts Screen**]
+  * Leads to [**Workout Modal Screen**]
+- [ ] [**Workout Modal Screen**]
+  * Leads to [**Stream Screen**]
+- [ ] [**Stream Screen**]
+  * Leads to [**Schedule Screen**]
 
 
 ## Wireframes
 
-[Add picture of your hand sketched wireframes in this section]
+![Capture](https://hackmd.io/_uploads/HJwFMSPxA.png)
 
-### [BONUS] Digital Wireframes & Mockups
 
-### [BONUS] Interactive Prototype
 
 ## Schema 
 
@@ -99,11 +92,12 @@ Allowing users to participate in live sessions led by professional trainers and 
 
 User
 
-| Property | Type   | Description                                  |
-|----------|--------|----------------------------------------------|
-| username | String | unique id for the user post (default field)   |
-| password | String | user's password for login authentication      |
-| ...      | ...    | ...                          
+| Property | Type   | Description                                 |
+| -------- | ------ | ------------------------------------------- |
+| email    | string | Email of the user                           |
+| username | String | unique id for the user post (default field) |
+| password | String | user's password for login authentication    |
+| ...      | ...    | ...                                         |
 
 
 Schedule
@@ -111,10 +105,9 @@ Schedule
 | Property | Type   | Description                                  |
 |----------|--------|----------------------------------------------|
 | Title | String | unique id for the user post (default field)   |
-| StartTime | datetime | user's password for login authentication      |
-| EndTime | datetime | user's password for login authentication      |
-|Description | String | |
-|InstructorName | String | |
+| StartTime | datetime | Start time for the schedule     |
+| EndTime | datetime | End time for the schedule|
+| Description | String | Description of the scheudle |
 | ...      | ...    | ...                          
 
 
@@ -122,18 +115,21 @@ ActivityRecord
 
 | Property | Type   | Description                                  |
 |----------|--------|----------------------------------------------|
-| username | String | unique id for the user post (default field)   |
-| password | String | user's password for login authentication      |
+| int | String | unique id for the user post (default field)   |
 | ...      | ...    | ...                          
 
-
+- Metadata to be defined
 
 Workout
 
 | Property | Type   | Description                                  |
 |----------|--------|----------------------------------------------|
-| username | String | unique id for the user post (default field)   |
-| password | String | user's password for login authentication      |
+| id | Int | unique id for workout   |
+|name| Name of the exercise
+| sets | String |    Count of sets   |
+|repetitions| int | Repetition count
+|time| int | expected duration of the workout in seconds
+|weight| Weight if applicable
 | ...      | ...    | ...                          
 
 
