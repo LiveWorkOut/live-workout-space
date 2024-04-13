@@ -27,7 +27,7 @@ Allowing users to participate in live sessions led by professional trainers and 
 - **Mobile:** Yes
 - **Story:**  Our app revolutionizes workouts by bringing live workout sessions with professional trainesrs and other people around the worl.d
 - **Market:** People who want to live an active and healthy lifestyle
-- **Habit:** Habit Use
+- **Habit:** Habit Use in the daily basis by a single user. Around 3-5 times a week for 20-45 minutes.
 - **Scope:** Narrow Scope fitness streaming community
 
 ## Product Spec
@@ -49,39 +49,50 @@ Allowing users to participate in live sessions led by professional trainers and 
 
 ### 2. Screen Archetypes
 
-- [ ] [**Screen Name, e.g., Login Screen**]
-* [Required User Feature: User can log in]
-- [ ] [**Streaming Screen**]
-* [Required User Feature: User can stream workout]
-- [ ] [**Comment Screen**]
-* [Nice-to-have Feature: Users can comment on streams]
-- [ ] [**Schedule Screen**]
-* [Required User Feature: Users can create a schedule for their workout stream and notify friends ]
+* Login Screen
+    * Archeotype: Login
+    * Required Feature: User can log in using Google Authentication
+* Streaming Screen
+    * Archeotype: Detail
+    * Required Feature: Be able to view the screens 
+* Schedule Screen
+    * Archeotype: List
+    * Required Feature: Can View multiple Schedules
+    * Requried Feature: Bookmark Bookmarked Schedules
+* Schedule Create
+    * Archeotype: Create
+    * Required Feature: Able to program their workout Schedules
+* Profile Screen
+    * Archeotype: Profile
+    * Required Feature: View Bookmarked Schedules
+    * Required Feature: View Schedules you personally created.
+
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
+- First Tab: **Search Screen**
+  Second Tab: **Instructors Screen**
+- Third Tab:  **Profile Screen**
 
-- [ ] First Tab: [**Workouts Screen**]
-- [ ] Second Tab: [**Instructors Screen**]
-- [ ] Third Tab: [**Search Screen**]
-- [ ] Fourth Tab: [**Profile Screen**]
 
 **Flow Navigation** (Screen to Screen)
 
-- [ ] [**Workouts Screen**]
-  * Leads to [**Workout Modal Screen**]
-- [ ] [**Workout Modal Screen**]
-  * Leads to [**Stream Screen**]
-- [ ] [**Stream Screen**]
-  * Leads to [**Schedule Screen**]
+- Schedules Screen
+  - => Open Modal => Go to Stream
+- Instructor Modal Screen
+  - => Stream Screen
+- Profile
+  - => Open Modal => Go to Stream
 
+
+![](./mockup.gif)
 
 ## Wireframes
 
-![Capture](https://hackmd.io/_uploads/HJwFMSPxA.png)
 
+![image](https://hackmd.io/_uploads/Bkm1iqwe0.png)
 
 
 ## Schema 
