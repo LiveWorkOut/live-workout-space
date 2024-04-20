@@ -12,7 +12,7 @@ https://github.com/orgs/LiveWorkOut/projects/1/views/2
 https://github.com/orgs/LiveWorkOut/projects/1/views/1
 
 ## Milestones
-![milestones](https://github.com/LiveWorkOut/live-workout-space/assets/63534623/8a47fd8a-f35d-4d8b-8569-5176588e42c2)
+![milestones](https://github.com/LiveWorkOut/live-workout-space/assets/63534623/6f3fe56a-2416-4d50-a62e-3cbf38300147)
 
 ## Completed user stories checked-off in README
 
