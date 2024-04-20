@@ -2,6 +2,7 @@
 
 > We are aware that `codepathreview` might not have access to our planning board, so we have some screenshots here
 
+## Proect Borad and Issues
 
 ![](./img/2024-04-20-00-55-33.png)
 https://github.com/orgs/LiveWorkOut/projects/1/views/2
