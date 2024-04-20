@@ -1,18 +1,3 @@
-# Group #4 Sprint Planning 
-
-> We are aware that `codepathreview` might not have access to our planning board, so we have some screenshots here
-
-
-![](./img/2024-04-20-00-55-33.png)
-
-![](./img/2024-04-20-00-57-29.png)
-
-
-## Completed user stories checked-off in README
-
-
-## GIFs created to show build progress and added to README
-
 # Live Workout Application
 
 
