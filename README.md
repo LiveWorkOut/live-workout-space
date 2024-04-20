@@ -4,8 +4,11 @@
 
 
 ![](./img/2024-04-20-00-55-33.png)
+https://github.com/orgs/LiveWorkOut/projects/1/views/2
 
 ![](./img/2024-04-20-00-57-29.png)
+
+https://github.com/orgs/LiveWorkOut/projects/1/views/1
 
 
 ## Completed user stories checked-off in README
