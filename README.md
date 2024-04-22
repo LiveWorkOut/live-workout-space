@@ -14,7 +14,10 @@ https://github.com/orgs/LiveWorkOut/projects/1/views/1
 ## Milestones
 ![milestones](https://github.com/LiveWorkOut/live-workout-space/assets/63534623/6f3fe56a-2416-4d50-a62e-3cbf38300147)
 
+# Completed User Stories
+
 ## Completed user stories checked-off in README
+
 
 
 ## GIFs created to show build progress and added to README
