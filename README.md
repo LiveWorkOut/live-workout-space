@@ -19,18 +19,12 @@ https://github.com/orgs/LiveWorkOut/projects/1/views/1
 
 ### Workout Schedule Creation Story
 
-Schedule Workout Creation Screen Story
 
-![](./gif/scheduleworkoutscreen.gif)
-
-### Login  + Profile Story
-
-![](./gif/login-profile.gif)
-
-
-### Wokrout Schedule Screen Story
-
-![](./img/2024-04-22-02-50-17.png)
+| Story                                  | gif                                  | Storyboard |
+| -------------------------------------- | ------------------------------------ | ---------- |
+| Login  + Profile Story                 | ![](./gif/login-profile.gif)         | ![](./img/2024-04-22-02-53-08.png)
+| Schedule Workout Creation Screen Story | ![](./gif/scheduleworkoutscreen.gif) | ![](./img/2024-04-22-02-53-23.png)
+| Wokrout Schedule Screen Story          | ![](./img/2024-04-22-02-50-17.png)   | ![](./img/2024-04-22-02-54-19.png)
 
 
 ## Completed user stories checked-off in README
@@ -153,19 +147,19 @@ User
 
 Schedule
 
-| Property | Type   | Description                                  |
-|----------|--------|----------------------------------------------|
-| Title | String | unique id for the user post (default field)   |
-| StartTime | datetime | Start time for the schedule     |
-| EndTime | datetime | End time for the schedule|
-| Description | String | Description of the scheudle |
-| ...      | ...    | ...                          
+| Property    | Type     | Description                                 |
+| ----------- | -------- | ------------------------------------------- |
+| Title       | String   | unique id for the user post (default field) |
+| StartTime   | datetime | Start time for the schedule                 |
+| EndTime     | datetime | End time for the schedule                   |
+| Description | String   | Description of the scheudle                 |
+| ...         | ...      | ...                                         |
 
 
 ActivityRecord
 
 | Property   | Type     | Description                                 |
-| ---------- | -------- |:------------------------------------------- |
+| ---------- | -------- | :------------------------------------------ |
 | id         | String   | unique id for the user post (default field) |
 | timestamp  | datetime | Time of the activity                        |
 | workout_id | int      | the workout performed                       |
@@ -175,13 +169,13 @@ ActivityRecord
 
 Workout
 
-| Property | Type   | Description                                  |
-|----------|--------|----------------------------------------------|
-| id | Int | unique id for workout   |
-|name| Name of the exercise
-| sets | String |    Count of sets   |
-|repetitions| int | Repetition count
-|time| int | expected duration of the workout in seconds
-|weight| Weight if applicable
-| ...      | ...    | ...                          
+| Property    | Type                 | Description                                 |
+| ----------- | -------------------- | ------------------------------------------- |
+| id          | Int                  | unique id for workout                       |
+| name        | Name of the exercise |
+| sets        | String               | Count of sets                               |
+| repetitions | int                  | Repetition count                            |
+| time        | int                  | expected duration of the workout in seconds |
+| weight      | Weight if applicable |
+| ...         | ...                  | ...                                         |
 
