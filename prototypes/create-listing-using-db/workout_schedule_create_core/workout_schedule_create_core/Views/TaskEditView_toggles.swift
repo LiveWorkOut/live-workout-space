@@ -67,6 +67,32 @@ struct TaskEditView: View {
     }
     
     
+    // Checkbox field view
+    struct CheckboxField: View {
+        let id: Int
+        let label: String
+        @Binding var isChecked: Bool
+        
+        // Print the label text when the checkbox is toggled
+        private func toggle() {
+            isChecked.toggle()
+            print("\(label) is toggled")
+        }
+
+
+
+        var body: some View {
+            Button(action: {
+                toggle()
+            }) {
+                HStack {
+                    Image(systemName: isChecked ? "checkmark.square.fill" : "square")
+                    Text(label)
+                }
+            }
+            .foregroundColor(isChecked ? .accentColor : .primary)
+        }
+    }
     
     // Helper function to return the binding for a specific day
     func binding(forDay dayIndex: Int) -> Binding<Bool> {
@@ -100,22 +126,6 @@ struct TaskEditView: View {
         default: break
         }
     }
-    
-    struct SmallToggleStyle: ToggleStyle {
-        func makeBody(configuration: Configuration) -> some View {
-            Button(action: {
-                configuration.isOn.toggle()
-            }) {
-                HStack {
-                    Text(configuration.isOn ? "✓" : "◦") // You can customize the symbols as needed
-                    configuration.label
-                }
-                .foregroundColor(configuration.isOn ? .accentColor : .primary)
-            }
-            .buttonStyle(PlainButtonStyle()) // Ensure the button style doesn't affect the tap area
-        }
-    }
-
 
     // Define day labels
     let dayLabels = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "All", "", "", "", "", "", "", "", ""]
@@ -136,34 +146,29 @@ struct TaskEditView: View {
                 VStack(alignment: .leading) {
                     Text("Select Days:")
                     
+                    // Try with button.
+                    Button(action: {
+                        monday.toggle()
+                        
+                    }) {
+                        Image(systemName: monday ? "checkmark.square.fill" : "square")
+                        Text("Monday")
+                    }  
+                    
+                    Button(action: {
+                        tuesday.toggle()
+                        
+                    }) {
+                        Image(systemName: tuesday ? "checkmark.square.fill" : "square")
+                        Text("Monday")
+                    }
                     HStack {
                         VStack(alignment: .leading, spacing: 10) {
                             HStack{
 
-                                    
-                                Toggle("Monday", isOn: $monday)
-                                    .toggleStyle(SmallToggleStyle())
-
-                                Toggle("Tuesday", isOn: $tuesday)
-                                    .toggleStyle(SmallToggleStyle())
-
-                                Toggle("Wednesday", isOn: $wednesday)
-                                    .toggleStyle(SmallToggleStyle())
-
-                            }
-                            HStack{
-                                Toggle("Thursday", isOn: $thursday)
-                                    .toggleStyle(SmallToggleStyle())
-
-                                Toggle("Friday", isOn: $friday)
-                                    .toggleStyle(SmallToggleStyle())
-
-                            }
-                            HStack{
-                                Toggle("Saturday", isOn: $saturday)
-                                    .toggleStyle(SmallToggleStyle())
-                                Toggle("Sunday", isOn: $sunday)
-                                    .toggleStyle(SmallToggleStyle())
+                                    // Try with swithc binding.
+                                    Toggle("Monday", isOn: $monday)
+                                    Toggle("Tuesday", isOn: $tuesday)
                             }
                         }
                     }

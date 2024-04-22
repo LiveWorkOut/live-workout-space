@@ -17,6 +17,8 @@ https://github.com/orgs/LiveWorkOut/projects/1/views/1
 # Completed User Stories
 
 
+### Workout Schedule Creation
+
 
 ## Completed user stories checked-off in README
 
@@ -113,7 +115,7 @@ Allowing users to participate in live sessions led by professional trainers and 
   - => Open Modal => Go to Stream
 
 
-![](./mockup.gif)
+![](gif/mockup.gif)
 
 ## Wireframes
 
