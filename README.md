@@ -2,7 +2,7 @@
 
 > We are aware that `codepathreview` might not have access to our planning board, so we have some screenshots here
 
-## Project Borad and Issues
+## Project Board and Issues
 
 ![](./img/2024-04-20-00-55-33.png)
 https://github.com/orgs/LiveWorkOut/projects/1/views/2
@@ -15,6 +15,8 @@ https://github.com/orgs/LiveWorkOut/projects/1/views/1
 ![milestones](https://github.com/LiveWorkOut/live-workout-space/assets/63534623/6f3fe56a-2416-4d50-a62e-3cbf38300147)
 
 # Completed User Stories
+
+
 
 ## Completed user stories checked-off in README
 
