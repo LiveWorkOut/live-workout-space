@@ -17,7 +17,20 @@ https://github.com/orgs/LiveWorkOut/projects/1/views/1
 # Completed User Stories
 
 
-### Workout Schedule Creation
+### Workout Schedule Creation Story
+
+Schedule Workout Creation Screen Story
+
+![](./gif/scheduleworkoutscreen.gif)
+
+### Login  + Profile Story
+
+![](./gif/login-profile.gif)
+
+
+### Wokrout Schedule Screen Story
+
+![](./img/2024-04-22-02-50-17.png)
 
 
 ## Completed user stories checked-off in README
