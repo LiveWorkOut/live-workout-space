@@ -1,14 +1,8 @@
-//
-//  workout_schedule_create_coreApp.swift
-//  workout_schedule_create_core
-//
-//  Created by Nene Wang  on 4/20/24.
-//
 
 import SwiftUI
 
-@main
-struct workout_schedule_create_coreApp: App {
+//@main
+struct TodoListAppTutorialApp: App{
     let persistenceController = PersistenceController.shared
     
     
@@ -24,3 +18,5 @@ struct workout_schedule_create_coreApp: App {
         }
     }
 }
+
+
