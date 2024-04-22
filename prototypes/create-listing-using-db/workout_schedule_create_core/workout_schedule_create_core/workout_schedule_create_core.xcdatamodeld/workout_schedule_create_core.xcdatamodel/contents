@@ -7,4 +7,13 @@
         <attribute name="timeCompleted" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
+    <entity name="Workout" representedClassName="Workout" syncable="YES" codeGenerationType="class"/>
+    <entity name="WorkoutSchedule" representedClassName=".WorkoutSchedule" syncable="YES" codeGenerationType="class">
+        <attribute name="hasPredefinedWorkout" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isPublic" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="saveVideo" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="setRecurrence" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="startTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+    </entity>
 </model>

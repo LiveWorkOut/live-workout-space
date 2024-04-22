@@ -36,11 +36,11 @@ struct TaskListView: View {
                         ToolbarItem(placement: .navigationBarTrailing) {
                             EditButton()
                         }
-                        ToolbarItem {
-                            Button(action: addItem) {
-                                Label("Add Item", systemImage: "plus")
-                            }
-                        }
+                        // ToolbarItem {
+                        //     Button(action: addItem) {
+                        //         Label("Add Item", systemImage: "plus")
+                        //     }
+                        // }
                     }
                     
                     FloatingButton().environmentObject(dateHolder)

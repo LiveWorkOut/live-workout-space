@@ -17,6 +17,7 @@
 		A9CB4B8E2BD571BB0096D542 /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CB4B8D2BD571BB0096D542 /* FloatingButton.swift */; };
 		A9CB4B912BD5FBF00096D542 /* DateHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CB4B902BD5FBF00096D542 /* DateHolder.swift */; };
 		A9CB4B932BD5FDD00096D542 /* TodoListAppTutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CB4B922BD5FDD00096D542 /* TodoListAppTutorialApp.swift */; };
+		A9CB4B9D2BD628EC0096D542 /* WorkoutSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CB4B9C2BD628EC0096D542 /* WorkoutSchedule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		A9CB4B8D2BD571BB0096D542 /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
 		A9CB4B902BD5FBF00096D542 /* DateHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHolder.swift; sourceTree = "<group>"; };
 		A9CB4B922BD5FDD00096D542 /* TodoListAppTutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListAppTutorialApp.swift; sourceTree = "<group>"; };
+		A9CB4B9C2BD628EC0096D542 /* WorkoutSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSchedule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				A9CB4B7E2BD48AEE0096D542 /* Persistence.swift */,
+				A9CB4B982BD628410096D542 /* Model */,
 				A9CB4B882BD5715B0096D542 /* Views */,
 				A9CB4B752BD48AEC0096D542 /* workout_schedule_create_coreApp.swift */,
 				A9CB4B8F2BD5FBE90096D542 /* Shared */,
@@ -99,6 +102,14 @@
 				A9CB4B922BD5FDD00096D542 /* TodoListAppTutorialApp.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		A9CB4B982BD628410096D542 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A9CB4B9C2BD628EC0096D542 /* WorkoutSchedule.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +188,7 @@
 				A9CB4B8E2BD571BB0096D542 /* FloatingButton.swift in Sources */,
 				A9CB4B8C2BD571980096D542 /* TaskEditView.swift in Sources */,
 				A9CB4B762BD48AEC0096D542 /* workout_schedule_create_coreApp.swift in Sources */,
+				A9CB4B9D2BD628EC0096D542 /* WorkoutSchedule.swift in Sources */,
 				A9CB4B822BD48AEE0096D542 /* workout_schedule_create_core.xcdatamodeld in Sources */,
 				A9CB4B932BD5FDD00096D542 /* TodoListAppTutorialApp.swift in Sources */,
 			);
