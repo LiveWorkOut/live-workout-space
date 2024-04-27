@@ -13,7 +13,7 @@ struct FloatingButton: View
             HStack
             {
                 Spacer()
-                NavigationLink(destination: TaskEditView(passedTaskItem: nil, initialDate: dateHolder.date)
+                NavigationLink(destination: WorkoutEditView(passedTaskItem: nil, initialDate: dateHolder.date)
                     .environmentObject(dateHolder))
                 {
                     Text("+ New Workout Schedule")

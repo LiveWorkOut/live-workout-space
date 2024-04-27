@@ -8,24 +8,30 @@
 import Foundation
 import SwiftUI
 
-struct TaskEditView: View {
+
+struct WorkouItemtDraft: Identifiable {
+        var id = UUID()
+        var name = ""
+        var count = 0
+        var value = 0
+}
+
+struct WorkoutEditView: View {
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @Environment(\.managedObjectContext) private var viewContext
     @EnvironmentObject var dateHolder: DateHolder
     
-    @State var selectedTaskItem: Item?
+//    @State var selectedTaskItem: Item?
+    @State var workoutSchedule: WorkoutSchedule?
+    
+    
     @State var name: String
     @State var desc: String
-    @State var timestamp: Date
-    @State var isCompleted: Bool
     
     @State var isPublic: Bool
     @State var saveAsVideo: Bool
     @State var setAsRecurrent: Bool
-    // Start and end date.
-    @State var startDate: Date
-    @State var endDate: Date
 
     // Monday to friday
     @State var monday: Bool
@@ -36,26 +42,36 @@ struct TaskEditView: View {
     @State var saturday: Bool
     @State var sunday: Bool
 
+
+    @State var startTime = Date()
+    @State var endTime = Date()
     
-    init(passedTaskItem: Item?, initialDate: Date){
+    
+    // sampleWorkout.count = 10
+    // sampleWorkout.value = 10
+
+    @State var workoutItems: [WorkouItemtDraft] = [
+        WorkouItemtDraft(name: "Pushups", count: 10, value: 10),
+    ]
+    @State var newItemName: String = ""
+    @State var newItemCount: String = ""
+    @State var newItemValue: String = ""
+    
+    
+    init(passedTaskItem: WorkoutSchedule?, initialDate: Date){
         if let taskItem = passedTaskItem {
             _name = State(initialValue: taskItem.name ?? "")
             _desc = State(initialValue: taskItem.desc ?? "")
-            _timestamp = State(initialValue: taskItem.timestamp ?? initialDate)
-            _isCompleted = State(initialValue: false)
             
         } else {
             _name = State(initialValue: "")
             _desc = State(initialValue: "")
-            _timestamp = State(initialValue: passedTaskItem?.timeCompleted ?? initialDate)
-            _isCompleted = State(initialValue: false)
         }
 
         _isPublic = State(initialValue: false)
         _saveAsVideo = State(initialValue: false)
         _setAsRecurrent = State(initialValue: false)
-        _startDate = State(initialValue: initialDate)
-        _endDate = State(initialValue: initialDate)
+        
         _monday = State(initialValue: false)
         _tuesday = State(initialValue: false)
         _wednesday = State(initialValue: false)
@@ -63,6 +79,9 @@ struct TaskEditView: View {
         _friday = State(initialValue: false)
         _saturday = State(initialValue: false)
         _sunday = State(initialValue: false)
+
+        _startTime = State(initialValue: initialDate)
+        _endTime = State(initialValue: initialDate)
 
     }
     
@@ -124,15 +143,53 @@ struct TaskEditView: View {
     var body: some View {
         
         Form{
-            Section(header: Text("Schedule")){
+            Section(header: Text("Workout Schedule")){
                 TextField("Schedule Name", text: $name)
                 TextField("Description", text: $desc)
             }
             
+            
+            Section(header: Text("Workout Items")) {
+                ForEach(workoutItems) { item in
+                    HStack {
+                        Text("\(item.name) - \(item.count) - \(item.value)")
+                        Spacer()
+                        Button(action: {
+                            if let index = workoutItems.firstIndex(where: { $0.id == item.id }) {
+                                workoutItems.remove(at: index)
+                            }
+                        }) {
+                            Image(systemName: "trash")
+                                .foregroundColor(.red)
+                        }
+                    }
+                }
+
+                HStack {
+                    TextField("Name", text: $newItemName)
+                    TextField("Count", text: $newItemCount)
+                        .keyboardType(.numberPad)
+                    TextField("Value", text: $newItemValue)
+                        .keyboardType(.decimalPad)
+                    Button("Add Item") {
+                        if let count = Int(newItemCount), let value = Int(newItemValue) {
+                            let newWorkout = WorkouItemtDraft(name: newItemName, count: count, value: value)
+                            workoutItems.append(newWorkout)
+                            newItemName = ""
+                            newItemCount = ""
+                            newItemValue = ""
+                        }
+                    }
+                }
+            }
+
+        
+            
             Section(header: Text("Start and End Date")) {
-                DatePicker("Start Date", selection: $startDate, displayedComponents: .date)
-                DatePicker("End Date", selection: $endDate, displayedComponents: .date)
-                
+
+                DatePicker("Start Time", selection: $startTime, displayedComponents: .hourAndMinute)
+                DatePicker("End Time", selection: $endTime, displayedComponents: .hourAndMinute)
+
                 VStack(alignment: .leading) {
                     Text("Select Days:")
                     
@@ -169,6 +226,8 @@ struct TaskEditView: View {
                     }
                 }
             }
+            
+            
 
 
             Section(header: Text("Schedule Options")){
@@ -185,19 +244,33 @@ struct TaskEditView: View {
         }
     }
     
-    func displayCOmps() -> DatePickerComponents
-    {
-        return isCompleted ? [.hourAndMinute, .date] : [.date]
-    }
     
     func saveAction(){
-        if selectedTaskItem == nil {
-            selectedTaskItem = Item(context: viewContext)
+        if workoutSchedule == nil {
+//            selectedTaskItem = Item(context: viewContext)
+            workoutSchedule = WorkoutSchedule(context: viewContext)
         }
+
+        // Make a for loop to add all items and use workout_uuid.
+
+        for item in workoutItems {
+            let workoutItem = Workout(context: viewContext)
+            workoutItem.name = item.name
+            workoutItem.count = Int16(item.count)
+            workoutItem.value = Int16(item.value)
+            
+            workoutItem.schedule_uuid = workoutSchedule?.uuid
+        }
+
+        workoutSchedule?.desc = desc
+        workoutSchedule?.timestamp = Date()
+        workoutSchedule?.name = name
+        workoutSchedule?.starttime = startTime
+        workoutSchedule?.endtime = endTime
+
+        workoutSchedule?.monday = monday
+        workoutSchedule?.tuesday = tuesday
         
-        selectedTaskItem?.timestamp = Date()
-        selectedTaskItem?.name = name
-        selectedTaskItem?.isCompleted = false
         
         dateHolder.saveContext(viewContext)
         self.presentationMode.wrappedValue.dismiss()

@@ -12,7 +12,7 @@ struct TodoListAppTutorialApp: App{
             let context = persistenceController.container.viewContext
             let dateHolder = DateHolder(context)
             
-            TaskListView()
+            WorkoutListView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
                 .environmentObject(dateHolder)
         }

@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		A9CB4B762BD48AEC0096D542 /* workout_schedule_create_coreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CB4B752BD48AEC0096D542 /* workout_schedule_create_coreApp.swift */; };
-		A9CB4B782BD48AEC0096D542 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CB4B772BD48AEC0096D542 /* TaskListView.swift */; };
+		A9CB4B782BD48AEC0096D542 /* WorkoutListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CB4B772BD48AEC0096D542 /* WorkoutListView.swift */; };
 		A9CB4B7A2BD48AEE0096D542 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9CB4B792BD48AEE0096D542 /* Assets.xcassets */; };
 		A9CB4B7D2BD48AEE0096D542 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9CB4B7C2BD48AEE0096D542 /* Preview Assets.xcassets */; };
 		A9CB4B7F2BD48AEE0096D542 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CB4B7E2BD48AEE0096D542 /* Persistence.swift */; };
 		A9CB4B822BD48AEE0096D542 /* workout_schedule_create_core.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A9CB4B802BD48AEE0096D542 /* workout_schedule_create_core.xcdatamodeld */; };
-		A9CB4B8C2BD571980096D542 /* TaskEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CB4B8B2BD571980096D542 /* TaskEditView.swift */; };
+		A9CB4B8C2BD571980096D542 /* WorkoutEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CB4B8B2BD571980096D542 /* WorkoutEditView.swift */; };
 		A9CB4B8E2BD571BB0096D542 /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CB4B8D2BD571BB0096D542 /* FloatingButton.swift */; };
 		A9CB4B912BD5FBF00096D542 /* DateHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CB4B902BD5FBF00096D542 /* DateHolder.swift */; };
 		A9CB4B932BD5FDD00096D542 /* TodoListAppTutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CB4B922BD5FDD00096D542 /* TodoListAppTutorialApp.swift */; };
@@ -23,12 +23,12 @@
 /* Begin PBXFileReference section */
 		A9CB4B722BD48AEC0096D542 /* workout_schedule_create_core.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = workout_schedule_create_core.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9CB4B752BD48AEC0096D542 /* workout_schedule_create_coreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workout_schedule_create_coreApp.swift; sourceTree = "<group>"; };
-		A9CB4B772BD48AEC0096D542 /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
+		A9CB4B772BD48AEC0096D542 /* WorkoutListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListView.swift; sourceTree = "<group>"; };
 		A9CB4B792BD48AEE0096D542 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9CB4B7C2BD48AEE0096D542 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A9CB4B7E2BD48AEE0096D542 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		A9CB4B812BD48AEE0096D542 /* workout_schedule_create_core.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = workout_schedule_create_core.xcdatamodel; sourceTree = "<group>"; };
-		A9CB4B8B2BD571980096D542 /* TaskEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditView.swift; sourceTree = "<group>"; };
+		A9CB4B8B2BD571980096D542 /* WorkoutEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutEditView.swift; sourceTree = "<group>"; };
 		A9CB4B8D2BD571BB0096D542 /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
 		A9CB4B902BD5FBF00096D542 /* DateHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHolder.swift; sourceTree = "<group>"; };
 		A9CB4B922BD5FDD00096D542 /* TodoListAppTutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListAppTutorialApp.swift; sourceTree = "<group>"; };
@@ -88,8 +88,8 @@
 		A9CB4B882BD5715B0096D542 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A9CB4B8B2BD571980096D542 /* TaskEditView.swift */,
-				A9CB4B772BD48AEC0096D542 /* TaskListView.swift */,
+				A9CB4B8B2BD571980096D542 /* WorkoutEditView.swift */,
+				A9CB4B772BD48AEC0096D542 /* WorkoutListView.swift */,
 				A9CB4B8D2BD571BB0096D542 /* FloatingButton.swift */,
 			);
 			path = Views;
@@ -184,9 +184,9 @@
 			files = (
 				A9CB4B912BD5FBF00096D542 /* DateHolder.swift in Sources */,
 				A9CB4B7F2BD48AEE0096D542 /* Persistence.swift in Sources */,
-				A9CB4B782BD48AEC0096D542 /* TaskListView.swift in Sources */,
+				A9CB4B782BD48AEC0096D542 /* WorkoutListView.swift in Sources */,
 				A9CB4B8E2BD571BB0096D542 /* FloatingButton.swift in Sources */,
-				A9CB4B8C2BD571980096D542 /* TaskEditView.swift in Sources */,
+				A9CB4B8C2BD571980096D542 /* WorkoutEditView.swift in Sources */,
 				A9CB4B762BD48AEC0096D542 /* workout_schedule_create_coreApp.swift in Sources */,
 				A9CB4B9D2BD628EC0096D542 /* WorkoutSchedule.swift in Sources */,
 				A9CB4B822BD48AEE0096D542 /* workout_schedule_create_core.xcdatamodeld in Sources */,

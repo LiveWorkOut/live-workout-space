@@ -83,6 +83,7 @@ class DateHolder: ObservableObject
         do {
             try context.save()
             refreshTaskItems(context)
+            refreshScheduleWorkout(context)
         } catch {
             let nsError = error as NSError
             fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
