@@ -6,6 +6,7 @@ class DateHolder: ObservableObject
     @Published var date = Date()
     @Published var taskItems: [Item] = []
     @Published var workoutSchedule: [WorkoutSchedule] = []
+    @Published var workouts: [Workout] = []
     
     let calendar: Calendar = Calendar.current
     
@@ -23,10 +24,16 @@ class DateHolder: ObservableObject
     func refreshTaskItems(_ context: NSManagedObjectContext)
     {
         taskItems = fetchTaskItems(context)
+        workouts = fetchWorkouts(context)
+        
     }
     
     func refreshScheduleWorkout(_ context: NSManagedObjectContext){
         workoutSchedule = fetchWorkoutSchedule(context)
+    }
+
+    func refreshWorkout(_ context: NSManagedObjectContext){
+        workouts = fetchWorkouts(context)
     }
     
     func fetchTaskItems(_ context: NSManagedObjectContext) -> [Item]
@@ -46,6 +53,18 @@ class DateHolder: ObservableObject
         do
         {
             return try context.fetch(dailyTasksFetch()) as [WorkoutSchedule]
+        }
+        catch let error
+        {
+            fatalError("Unresolved error \(error)")
+        }
+    }
+
+    func fetchWorkouts(_ context: NSManagedObjectContext) -> [Workout]
+    {
+        do
+        {
+            return try context.fetch(dailyTasksFetch()) as [Workout]
         }
         catch let error
         {

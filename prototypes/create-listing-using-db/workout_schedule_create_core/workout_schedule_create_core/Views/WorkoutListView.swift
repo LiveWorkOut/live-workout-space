@@ -27,7 +27,7 @@ struct WorkoutListView: View {
         animation: .default)
 //    private var items: FetchedResults<Item>
     private var workoutSchedules: FetchedResults<WorkoutSchedule>
-//    private var workouts: FetchedResults<Workout>
+    private var fetchedResults: FetchedResults<Workout>
     
     private var workouts: [WorkouItemDraft] = [
         WorkouItemDraft(id: ObjectIdentifier(UUID() as AnyObject), name: "Pushups", count: 10, value: 10),
